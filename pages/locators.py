@@ -13,3 +13,8 @@ class ProductPageLocators():
     ADD_PRICE = (By.CSS_SELECTOR, "div.alertinner > p > strong")
     TITLE = (By.CSS_SELECTOR, "div.product_main > h1")
     ADD_TITLE = (By.CSS_SELECTOR, "div.alertinner > strong")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "div.alert-success:nth-child(1)")
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")

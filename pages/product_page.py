@@ -22,3 +22,12 @@ class ProductPage(BasePage):
         title = self.browser.find_element(*ProductPageLocators.TITLE).text
         add_title = self.browser.find_element(*ProductPageLocators.ADD_TITLE).text
         assert title == add_title, "Title is not correct"
+    def should_not_be_success_message_after_adding(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), "There is no success message on the page after adding"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), "There is no success message on the page"
+
+    def should_dissapear_after_adding(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), "Success message has not dissappered"
+
